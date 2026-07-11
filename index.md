@@ -6,19 +6,7 @@ description: Informativa sul trattamento dei dati personali
 
 # Privacy Policy di NeoGauge
 
-> **Stato del documento:** quasi definitivo. Prima della pubblicazione manca soltanto l'URL pubblico della pagina e la scelta del relativo servizio di hosting.
-
-## Informazioni da completare prima della pubblicazione
-
-Per finalizzare questa Privacy Policy restano da definire soltanto:
-
-- **URL pubblico definitivo di questa Privacy Policy:** `[DA CREARE]`
-- **Servizio che ospiterà la pagina:** `[DA SCEGLIERE]`
-- **Eventuali cookie, statistiche o moduli di contatto della futura pagina:** la soluzione consigliata è una pagina statica senza cookie, analytics o moduli.
-
-Questa informativa descrive il trattamento effettuato dall'app NeoGauge. La pagina web che la ospiterà potrebbe richiedere un'informativa separata o un'integrazione qualora utilizzi cookie, moduli di contatto, statistiche o altri servizi.
-
----
+Questa informativa descrive il trattamento effettuato dall'app NeoGauge. È pubblicata come pagina statica tramite GitHub Pages e non integra analytics, pubblicità, cookie aggiuntivi o moduli di contatto. GitHub può trattare dati tecnici di accesso secondo la propria informativa sulla privacy.
 
 ## 1. Chi tratta i dati
 
@@ -264,7 +252,7 @@ Chi ritiene che un minore abbia fornito dati senza l'autorizzazione necessaria p
 
 ## 15. Modifiche a questa Privacy Policy
 
-Questa informativa può essere aggiornata per riflettere modifiche dell'app, dei servizi Apple o della normativa. La versione aggiornata sarà pubblicata all'indirizzo **https://djconny.github.io/NeoGauge-Privacy/**, indicando la nuova data di entrata in vigore.
+Questa informativa può essere aggiornata per riflettere modifiche dell'app, dei servizi Apple o della normativa. La versione aggiornata sarà pubblicata all'indirizzo [https://djconny.github.io/NeoGauge-Privacy/](https://djconny.github.io/NeoGauge-Privacy/), indicando la nuova data di entrata in vigore.
 
 Quando le modifiche sono rilevanti, il Titolare informerà gli utenti con modalità adeguate, ad esempio tramite l'app, la pagina web o l'App Store, prima che le modifiche producano effetti quando richiesto dalla legge.
 
