@@ -1,0 +1,103 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+  color-scheme: dark;
+  --ng-green: #00f28d;
+  --ng-bg: #070b0d;
+  --ng-card: #11191d;
+  --ng-text: #f4f7f6;
+  --ng-muted: #a9b7b2;
+  --ng-border: rgba(255, 255, 255, 0.10);
+}
+
+body {
+  background: var(--ng-bg);
+  color: var(--ng-text);
+}
+
+.page-header {
+  background: radial-gradient(circle at top, #164c3a 0%, #0a2019 52%, #070b0d 100%);
+  color: var(--ng-text);
+  padding: 3.5rem 1.5rem 3rem;
+}
+
+.project-name {
+  letter-spacing: -0.035em;
+}
+
+.project-tagline {
+  color: #cde4da;
+  opacity: 1;
+}
+
+.main-content {
+  max-width: 880px;
+  padding: 2.5rem 1.5rem 5rem;
+  color: var(--ng-text);
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  color: var(--ng-green);
+}
+
+.main-content h2 {
+  margin-top: 2.8rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--ng-border);
+}
+
+.main-content p,
+.main-content li {
+  color: var(--ng-text);
+  line-height: 1.75;
+}
+
+.main-content a {
+  color: var(--ng-green);
+}
+
+.main-content code {
+  color: #d8fff0;
+  background: #17231f;
+}
+
+.main-content table {
+  display: table;
+  width: 100%;
+  background: var(--ng-card);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.main-content table th {
+  color: var(--ng-green);
+  background: #14231d;
+}
+
+.main-content table th,
+.main-content table td {
+  border-color: var(--ng-border);
+  color: var(--ng-text);
+}
+
+.site-footer {
+  color: var(--ng-muted);
+  border-top-color: var(--ng-border);
+}
+
+@media (max-width: 640px) {
+  .main-content table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .page-header {
+    padding: 2.5rem 1rem 2.25rem;
+  }
+}
