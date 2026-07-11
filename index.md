@@ -134,7 +134,7 @@ Apple tratta dati tecnici e richieste necessarie a fornire tali servizi secondo 
 
 I dati vengono trattati per le seguenti finalità:
 
-| Finalità | Dati interessati | Base giuridica proposta |
+| Finalità | Dati interessati | Base giuridica |
 |---|---|---|
 | Creare e gestire il profilo e la sessione | Nome, cognome, email, identificativi e credenziali | Esecuzione del servizio richiesto dall'utente, art. 6(1)(b) GDPR |
 | Registrare e sincronizzare moto, foto, rifornimenti, chilometraggio, percorsi e statistiche | Dati e contenuti inseriti o generati usando l'app | Esecuzione del servizio richiesto dall'utente, art. 6(1)(b) GDPR |
@@ -163,7 +163,7 @@ Dal codice attuale non risultano SDK pubblicitari, piattaforme di analytics, sis
 
 L'uso dei servizi Apple può comportare il trattamento di dati in Paesi diversi da quello dell'utente, compresi Paesi esterni allo Spazio economico europeo. Apple dichiara di utilizzare le garanzie previste dalla normativa applicabile per i trasferimenti internazionali; le condizioni concrete dipendono dal servizio Apple, dall'account e dagli accordi applicabili.
 
-Prima della pubblicazione, il Titolare deve verificare i propri accordi Apple Developer/iCloud e indicare, se necessario, le garanzie utilizzate, come decisioni di adeguatezza o clausole contrattuali standard.
+Per maggiori informazioni sulla localizzazione dei dati e sulle garanzie utilizzate da Apple, l'utente può consultare l'informativa e i termini applicabili ai servizi Apple indicati nella sezione 5.
 
 ## 9. Conservazione dei dati
 
