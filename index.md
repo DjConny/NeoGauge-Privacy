@@ -34,12 +34,10 @@ NeoGauge è un'app per gestire le informazioni relative alle proprie moto, regis
 NeoGauge può trattare:
 
 - nome e cognome;
-- indirizzo email;
-- identificativo interno del profilo;
-- identificativo univoco fornito da “Accedi con Apple”, se viene scelta questa modalità;
-- informazioni di sessione e credenziali necessarie all'accesso locale.
+- indirizzo email facoltativo;
+- identificativo interno del profilo e degli altri record applicativi.
 
-Quando si usa “Accedi con Apple”, nome ed email possono essere comunicati da Apple soltanto in occasione del primo consenso. Se si sceglie “Nascondi la mia email”, NeoGauge riceve l'indirizzo relay messo a disposizione da Apple e non l'indirizzo email personale originario.
+NeoGauge non crea un account proprietario e non utilizza password o “Accedi con Apple”. La configurazione iniziale serve soltanto a creare il profilo conservato nei dati privati dell'utente.
 
 ### 3.2 Dati delle moto e contenuti inseriti dall'utente
 
@@ -108,19 +106,11 @@ Nella configurazione ordinaria, l'archivio SwiftData è sincronizzato con il dat
 
 Il database è privato dell'utente e utilizza l'infrastruttura iCloud di Apple. Disponibilità, conservazione tecnica e localizzazione dei dati nell'infrastruttura Apple dipendono dall'account, dalle impostazioni iCloud e dai termini applicabili ai servizi Apple.
 
-### 4.3 Keychain e iCloud Keychain
-
-NeoGauge usa il Keychain di Apple per proteggere piccole informazioni di autenticazione, tra cui email di accesso, credenziali locali e identificativo restituito da “Accedi con Apple”. Quando la voce è configurata come sincronizzabile e l'utente ha attivato iCloud Keychain, Apple può sincronizzarla in forma protetta tra i dispositivi dell'utente.
-
-Il Keychain è separato dall'archivio SwiftData ed è protetto dai meccanismi di sicurezza del sistema operativo. NeoGauge può usare Face ID per sbloccare la sessione, ma il codice dell'app non riceve né conserva i dati biometrici: la verifica è effettuata dal sistema Apple.
-
 ## 5. Servizi Apple utilizzati
 
 NeoGauge integra servizi e framework Apple necessari alle funzioni richieste dall'utente:
 
 - **iCloud e CloudKit**, per sincronizzare dati e backup nel database privato dell'utente;
-- **Keychain e iCloud Keychain**, per proteggere e, se abilitato, sincronizzare le credenziali;
-- **Accedi con Apple**, per l'autenticazione facoltativa;
 - **Core Location/GPS**, per posizione, velocità, direzione, altitudine e calcoli di viaggio;
 - **MapKit e Mappe**, per mostrare o aprire le coordinate dei rifornimenti;
 - **WeatherKit**, per ottenere temperatura e condizioni meteo relative alla posizione corrente;
@@ -136,12 +126,11 @@ I dati vengono trattati per le seguenti finalità:
 
 | Finalità | Dati interessati | Base giuridica |
 |---|---|---|
-| Creare e gestire il profilo e la sessione | Nome, cognome, email, identificativi e credenziali | Esecuzione del servizio richiesto dall'utente, art. 6(1)(b) GDPR |
+| Creare e gestire il profilo | Nome, cognome, email facoltativa e identificativi interni | Esecuzione del servizio richiesto dall'utente, art. 6(1)(b) GDPR |
 | Registrare e sincronizzare moto, foto, rifornimenti, chilometraggio, percorsi e statistiche | Dati e contenuti inseriti o generati usando l'app | Esecuzione del servizio richiesto dall'utente, art. 6(1)(b) GDPR |
 | Fornire funzioni GPS, meteo e mappa | Posizione precisa e dati derivati | Consenso dell'utente, art. 6(1)(a) GDPR, espresso tramite il permesso del sistema e revocabile dalle impostazioni |
 | Acquisire una foto della moto | Foto scelta o scattata dall'utente | Consenso dell'utente, art. 6(1)(a) GDPR, espresso mediante l'azione e il permesso del sistema |
 | Inviare promemoria locali | Preferenza del promemoria, identificativo della moto e data dell'ultimo aggiornamento | Consenso dell'utente, art. 6(1)(a) GDPR, revocabile dalle impostazioni o nell'app |
-| Proteggere sessione, credenziali e integrità dell'app | Informazioni di autenticazione e dati tecnici strettamente necessari | Esecuzione del servizio, art. 6(1)(b) GDPR, e legittimo interesse del Titolare alla sicurezza, art. 6(1)(f) GDPR |
 | Gestire acquisti e ripristino dei diritti acquistati | Stato della transazione e diritto StoreKit | Esecuzione del contratto, art. 6(1)(b) GDPR; gli aspetti fiscali e di pagamento sono gestiti separatamente da Apple |
 | Rispondere alle richieste privacy e adempiere agli obblighi normativi | Dati della richiesta e corrispondenza | Obbligo legale, art. 6(1)(c) GDPR |
 
@@ -153,7 +142,7 @@ I dati non vengono venduti e non vengono comunicati a inserzionisti o società d
 
 Possono essere trattati o trasmessi a:
 
-- **Apple**, attraverso iCloud, CloudKit, Keychain, Accedi con Apple, MapKit, WeatherKit, StoreKit, App Store e gli altri servizi di sistema descritti sopra;
+- **Apple**, attraverso iCloud, CloudKit, MapKit, WeatherKit, StoreKit, App Store e gli altri servizi di sistema descritti sopra;
 - eventuali soggetti che assistano il Titolare per obblighi legali, sicurezza o supporto, soltanto se effettivamente nominati e nei limiti necessari;
 - autorità pubbliche, quando la comunicazione sia richiesta dalla legge o da un provvedimento legittimo.
 
@@ -167,17 +156,16 @@ Per maggiori informazioni sulla localizzazione dei dati e sulle garanzie utilizz
 
 ## 9. Conservazione dei dati
 
-I dati dell'app vengono conservati sul dispositivo e nel CloudKit privato dell'utente finché l'account e i relativi dati restano presenti oppure finché l'utente non li elimina.
+I dati dell'app vengono conservati sul dispositivo e nel CloudKit privato dell'utente finché il profilo e i relativi dati restano presenti oppure finché l'utente non li elimina.
 
 In particolare:
 
 - i dati operativi restano nell'archivio SwiftData e nella copia CloudKit sincronizzata;
-- le credenziali restano nel Keychain finché l'utente non elimina l'account o finché non vengono rimosse dall'app o dalle impostazioni Apple;
 - il riepilogo di backup sostituisce il file precedente, quindi ne viene mantenuta una sola versione;
-- le notifiche locali restano programmate finché sono attive o finché l'account non viene eliminato;
+- le notifiche locali restano programmate finché sono attive o finché i dati NeoGauge non vengono eliminati;
 - dopo una richiesta di cancellazione possono essere conservati soltanto eventuali dati strettamente necessari per adempiere a obblighi di legge o difendere un diritto, per il periodo richiesto dalla normativa applicabile. NeoGauge non mantiene nel proprio archivio una copia separata dei dati di pagamento gestiti da Apple.
 
-La rimozione dell'app elimina normalmente il contenitore locale dell'app, ma non garantisce da sola la cancellazione dei dati presenti in iCloud Keychain o nel CloudKit privato. Per una cancellazione coordinata deve essere utilizzata la funzione “Elimina account” prima di disinstallare l'app, oppure deve essere contattato il Titolare.
+La rimozione dell'app elimina normalmente il contenitore locale, ma non garantisce da sola la cancellazione dei dati presenti nel CloudKit privato. Per una cancellazione coordinata deve essere utilizzata la funzione “Elimina dati NeoGauge” prima di disinstallare l'app.
 
 ## 10. Sicurezza
 
@@ -186,9 +174,8 @@ NeoGauge adotta misure coerenti con la natura dell'app, tra cui:
 - contenitore privato dell'app protetto dal sistema operativo;
 - archiviazione locale mediante SwiftData;
 - database CloudKit privato associato all'account iCloud dell'utente;
-- Keychain per credenziali e identificativi di autenticazione;
-- possibilità di proteggere l'accesso mediante Face ID, senza accesso ai dati biometrici;
 - connessioni e servizi gestiti dai framework Apple;
+- protezione facoltativa dell'accesso locale tramite LocalAuthentication (Face ID, Touch ID o codice del dispositivo); NeoGauge non accede né conserva dati biometrici;
 - riduzione e compressione locale delle immagini prima del salvataggio;
 - assenza di un database applicativo pubblico o di un backend proprietario.
 
@@ -225,20 +212,20 @@ Le richieste possono essere inviate a **ffc80.lavoro@gmail.com**. Il Titolare pu
 
 Per informazioni sui diritti e sui reclami è possibile consultare il sito del [Garante per la protezione dei dati personali](https://www.garanteprivacy.it/).
 
-## 13. Eliminazione dell'account
+## 13. Eliminazione dei dati NeoGauge
 
-NeoGauge include una funzione “Elimina account” con conferma esplicita. In base al funzionamento attuale dell'app, questa funzione tenta di eliminare:
+NeoGauge include una funzione “Elimina dati NeoGauge” con conferma esplicita. Questa funzione tenta di eliminare:
 
 - il backup esplicito presente nel CloudKit privato;
 - i record SwiftData relativi a profilo, moto, chilometraggio, rifornimenti, percorsi e statistiche, con propagazione tramite CloudKit;
 - il backup locale;
-- preferenze e impostazioni dell'account conservate in `UserDefaults`;
+- preferenze e impostazioni dell'app conservate in `UserDefaults`;
 - notifiche locali programmate;
-- credenziali e identificativi conservati nel Keychain locale e sincronizzabile.
+- eventuali credenziali obsolete rimaste nel Keychain da precedenti versioni di sviluppo.
 
-Se l'eliminazione del backup CloudKit o dell'archivio principale non riesce, l'app interrompe l'operazione e informa l'utente. Se restano elementi secondari, come file locali o credenziali, l'app segnala che la pulizia è stata soltanto parziale.
+Prima di cancellare l'archivio locale, l'app verifica che l'account iCloud sia disponibile e richiede l'eliminazione del backup esplicito. Se questa richiesta non viene confermata da CloudKit, ad esempio per assenza di rete, iCloud disattivato, account non disponibile o conflitto, l'app interrompe l'operazione: nessun record SwiftData locale viene cancellato e l'utente può riprovare senza creare duplicati.
 
-NeoGauge non conserva i token necessari per revocare automaticamente l'autorizzazione “Accedi con Apple”. Dopo aver eliminato l'account, l'utente può revocare separatamente l'accesso a NeoGauge dalle impostazioni del proprio account Apple.
+Dopo il salvataggio SwiftData, i record sono cancellati dalla copia locale e le eliminazioni vengono affidate alla sincronizzazione del CloudKit privato. SwiftData non espone un segnale pubblico affidabile che permetta all'app di confermare immediatamente la ricezione delle eliminazioni sul server o su ogni altro dispositivo. Per questo NeoGauge non dichiara nella UI che la cancellazione CloudKit di tutti i record sia già completata. Se restano elementi secondari, come file locali o credenziali, l'app segnala che la pulizia è stata soltanto parziale.
 
 Per esercitare i diritti GDPR è possibile contattare **ffc80.lavoro@gmail.com**. Per problemi tecnici relativi alla procedura è possibile contattare **kawasaki.z650rs.italia@gmail.com**.
 
@@ -262,7 +249,7 @@ Quando le modifiche sono rilevanti, il Titolare informerà gli utenti con modali
 
 ## 17. Contatti
 
-Per domande su questa Privacy Policy, per assistenza sulla cancellazione dell'account o per esercitare i diritti in materia di protezione dei dati:
+Per domande su questa Privacy Policy, per assistenza sulla cancellazione dei dati o per esercitare i diritti in materia di protezione dei dati:
 
 **Fabio Francesco Conese**, persona fisica  
 **Via Carmine 54/B, 28047 Oleggio (NO), Italia**  
