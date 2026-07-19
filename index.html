@@ -10,49 +10,102 @@
     main { max-width: 760px; margin: 0 auto; padding: 48px 24px 72px; }
     h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 8px; }
     h2 { font-size: 1.35rem; margin-top: 38px; }
+    h3 { font-size: 1.1rem; margin-top: 28px; }
     p, li { color: #d5dae2; }
     a { color: #4ade80; }
     .updated { color: #9ca7b7; margin-top: 0; }
     .notice { padding: 16px 18px; border-radius: 12px; background: #151a21; border: 1px solid #2b3542; }
+    strong { color: #ffffff; }
   </style>
 </head>
 <body>
   <main>
     <h1>Informativa sulla privacy di NeoGauge</h1>
-    <p class="updated">Ultimo aggiornamento: 12 luglio 2026</p>
+    <p class="updated">Ultimo aggiornamento: 19 luglio 2026</p>
 
-    <p class="notice">NeoGauge è un'app per la gestione di moto, rifornimenti, percorsi e statistiche. Questa informativa spiega come vengono trattati i dati quando utilizzi l'app.</p>
+    <p class="notice">Questa informativa riguarda NeoGauge per iPhone e iPad. La pagina è statica e non contiene moduli di contatto o strumenti pubblicitari propri; GitHub può trattare i dati tecnici di accesso secondo la propria informativa.</p>
 
     <h2>1. Titolare del trattamento</h2>
-    <p>Il titolare del trattamento è Fabio Conese. Per domande sulla privacy o per esercitare i tuoi diritti puoi contattare <a href="mailto:fabio.conese@gmail.com">fabio.conese@gmail.com</a>.</p>
+    <p><strong>Fabio Francesco Conese</strong>, persona fisica<br>
+      Via Carmine 54/B, 28047 Oleggio (NO), Italia<br>
+      Email privacy e amministrativa: <a href="mailto:ffc80.lavoro@gmail.com">ffc80.lavoro@gmail.com</a><br>
+      Assistenza tecnica: <a href="mailto:kawasaki.z650rs.italia@gmail.com">kawasaki.z650rs.italia@gmail.com</a><br>
+      PEC: non disponibile. DPO/RPD: non nominato.</p>
 
-    <h2>2. Dati gestiti dall'app</h2>
-    <p>NeoGauge può gestire dati inseriti direttamente dall'utente, tra cui informazioni sulla moto, chilometraggio, rifornimenti, percorsi, statistiche e fotografie facoltative della moto.</p>
-    <p>Questi dati sono salvati sul dispositivo. Se hai iCloud attivo, possono essere sincronizzati nel database CloudKit privato associato al tuo account Apple, per rendere disponibili i dati sui tuoi dispositivi compatibili.</p>
+    <h2>2. Come funziona l'archiviazione</h2>
+    <p>NeoGauge non utilizza un backend proprietario del Titolare. Profilo, moto, chilometraggio, rifornimenti, giri, diario, fotografie e statistiche vengono salvati sul dispositivo con SwiftData e, quando iCloud è disponibile, sincronizzati nel CloudKit privato associato all'account Apple dell'utente.</p>
+    <p>NeoGauge non crea un account proprietario, non usa password e non richiede “Accedi con Apple”.</p>
 
-    <h2>3. Posizione, fotocamera e notifiche</h2>
+    <h2>3. Dati trattati</h2>
+    <h3>Profilo e contenuti</h3>
+    <p>L'app può trattare nome, cognome, email facoltativa, identificativi interni, dati e foto delle moto, letture chilometriche, rifornimenti e costi, titolo e riepilogo dei giri, statistiche, preferenze e promemoria.</p>
+    <p>NeoGauge Plus abilita testo e fotografie del diario dei giri e posizione GPS dei rifornimenti. Senza un abbonamento attivo, eventuali contenuti Plus già creati restano consultabili in sola lettura e non vengono eliminati automaticamente.</p>
+
+    <h3>Posizione precisa e checkpoint temporaneo</h3>
+    <p>Con il permesso dell'utente, NeoGauge usa la posizione durante un giro per velocità, direzione, altitudine, distanza, durata, meteo e riepilogo. Se il giro è attivo, la posizione può continuare a essere usata mentre l'app viene temporaneamente portata in secondo piano, per esempio per consultare un navigatore.</p>
+    <p><strong>NeoGauge non salva la traccia GPS punto per punto e non crea uno storico del percorso seguito.</strong> Conserva localmente soltanto l'ultimo checkpoint temporaneo utile a recuperare un giro dopo un'interruzione. Il checkpoint viene eliminato dopo il salvataggio o l'annullamento e, se obsoleto, entro 24 ore.</p>
+    <p>Con NeoGauge Plus, l'utente può scegliere di salvare coordinate, precisione e momento della posizione in un rifornimento. La posizione può essere sincronizzata tramite CloudKit e mostrata con MapKit o Mappe. Se Plus non è più attivo, una posizione storica resta visibile in sola lettura.</p>
+
+    <h3>Fotocamera, foto e notifiche</h3>
+    <p>Fotocamera e libreria vengono usate solo quando l'utente sceglie una foto della moto o del diario. Le immagini non vengono usate per riconoscimento facciale, profilazione o personalizzazione pubblicitaria. Le notifiche locali vengono programmate soltanto per i promemoria scelti dall'utente.</p>
+
+    <h2>4. Acquisti e NeoGauge Plus</h2>
+    <p>Lo sblocco permanente della seconda moto è un acquisto non consumabile una tantum, separato da NeoGauge Plus. NeoGauge Plus è un abbonamento mensile che rimuove la pubblicità e abilita diario testuale/fotografico e posizione GPS dei rifornimenti.</p>
+    <p>Pagamenti e transazioni sono gestiti da Apple tramite App Store. NeoGauge non conserva numeri di carta o credenziali di pagamento.</p>
+    <p>RevenueCat gestisce tecnicamente lo stato di NeoGauge Plus e riceve un identificativo applicativo anonimo e le informazioni necessarie a verificare acquisti, rinnovi, scadenze e diritto alle funzioni. NeoGauge non invia a RevenueCat nome o email del profilo e non configura un identificativo utente personalizzato.</p>
+
+    <h2>5. Pubblicità e consenso</h2>
+    <p>Senza NeoGauge Plus, l'app può mostrare banner e annunci interstitial tramite Google AdMob. Google Mobile Ads e User Messaging Platform possono trattare indirizzo IP e posizione approssimativa derivata, identificativi del dispositivo, interazioni con gli annunci, dati pubblicitari, prestazioni e diagnostica.</p>
+    <p>Questi dati non comprendono profilo, moto, diario, fotografie o posizione GPS precisa salvata nei rifornimenti. Quando richiesto, NeoGauge mostra il messaggio di consenso Google prima di richiedere gli annunci. Le scelte possono essere riviste da <strong>Supporto → Consenso pubblicitario</strong> quando l'opzione è richiesta.</p>
+    <p>Quando NeoGauge Plus risulta attivo, l'app interrompe le richieste pubblicitarie e rimuove immediatamente banner e interstitial su iPhone e iPad.</p>
+
+    <h2>6. Backup</h2>
+    <p>Il backup esplicito è un file JSON di riepilogo con data, conteggi, versione e build. Viene salvato nell'area privata dell'app e caricato nel CloudKit privato. Viene mantenuto un solo file <code>latest-backup.json</code>, sostituito dal successivo. È distinto dalla normale sincronizzazione dei dati completi.</p>
+
+    <h2>7. Servizi e fornitori</h2>
     <ul>
-      <li>La posizione viene usata solo con la tua autorizzazione per le funzioni di viaggio, velocità e condizioni meteo correlate alla posizione.</li>
-      <li>Fotocamera e libreria foto sono usate solo se scegli di aggiungere una foto alla moto.</li>
-      <li>Le notifiche locali sono usate solo se attivi i promemoria dell'app.</li>
+      <li><strong>Apple</strong>: iCloud, CloudKit, Core Location, MapKit, Mappe, WeatherKit, StoreKit, App Store, fotocamera, libreria foto e notifiche.</li>
+      <li><strong>RevenueCat</strong>: verifica e sincronizzazione dello stato dell'abbonamento.</li>
+      <li><strong>Google AdMob</strong>: annunci agli utenti senza Plus.</li>
+      <li><strong>Google User Messaging Platform</strong>: gestione delle scelte pubblicitarie quando richiesta.</li>
     </ul>
-    <p>Puoi modificare o revocare queste autorizzazioni in qualsiasi momento dalle impostazioni di iOS o iPadOS.</p>
+    <p>Informative: <a href="https://www.apple.com/legal/privacy/">Apple</a>, <a href="https://policies.google.com/privacy?hl=it">Google</a>, <a href="https://www.revenuecat.com/privacy/">RevenueCat</a>.</p>
 
-    <h2>4. Pubblicità</h2>
-    <p>La versione gratuita di NeoGauge può mostrare annunci forniti da Google AdMob. Prima di richiedere annunci, l'app presenta le scelte di consenso previste dalla normativa applicabile. Puoi gestire o revocare le tue preferenze in qualsiasi momento dalle impostazioni privacy dell'app, quando disponibili.</p>
-    <p>Google e i suoi partner possono trattare identificatori del dispositivo e dati tecnici necessari alla visualizzazione e alla misurazione degli annunci, in base alle preferenze espresse. Per ulteriori informazioni consulta la <a href="https://policies.google.com/privacy?hl=it">Privacy Policy di Google</a>.</p>
+    <h2>8. Finalità e basi giuridiche</h2>
+    <p>Profilo, contenuti, sincronizzazione, acquisti e funzioni Plus sono trattati per fornire il servizio richiesto e dare esecuzione al contratto. GPS, fotografie e promemoria sono trattati sulla base del consenso espresso tramite l'azione e i permessi di sistema. Pubblicità e misurazione si basano sul consenso quando richiesto e sulle altre basi previste dalla normativa applicabile. Le richieste privacy sono trattate per adempiere agli obblighi legali.</p>
 
-    <h2>5. Acquisti e abbonamenti</h2>
-    <p>Gli acquisti in-app e gli abbonamenti sono elaborati da Apple tramite l'App Store. NeoGauge riceve esclusivamente le informazioni necessarie per verificare l'accesso alle funzioni acquistate, come lo sblocco della seconda moto o la rimozione della pubblicità. Per la gestione tecnica dello stato dell'abbonamento l'app può utilizzare RevenueCat.</p>
+    <h2>9. Destinatari e trasferimenti</h2>
+    <p>I dati non vengono venduti dal Titolare. Possono essere trattati da Apple, Google e RevenueCat per i servizi descritti, oppure comunicati ad autorità o professionisti quando necessario per obblighi legali, sicurezza o difesa di un diritto.</p>
+    <p>I fornitori possono trattare dati anche fuori dallo Spazio economico europeo applicando le garanzie indicate nelle proprie informative. NeoGauge non invia ai fornitori pubblicitari profilo, moto, diario, foto o coordinate GPS precise salvate.</p>
 
-    <h2>6. Conservazione e cancellazione</h2>
-    <p>I dati restano disponibili finché li conservi nell'app o nel tuo account iCloud. Puoi cancellare singoli dati dall'app e richiedere la cancellazione dell'archivio dall'area di gestione account, quando disponibile. La disinstallazione dell'app non elimina automaticamente gli eventuali dati già sincronizzati su iCloud.</p>
+    <h2>10. Conservazione e sicurezza</h2>
+    <ul>
+      <li>I dati operativi restano sul dispositivo e nel CloudKit privato finché l'utente non li elimina.</li>
+      <li>Il checkpoint del giro viene eliminato dopo salvataggio o annullamento e, se obsoleto, entro 24 ore.</li>
+      <li>Il backup sostituisce la versione precedente.</li>
+      <li>Apple, Google e RevenueCat conservano i dati tecnici per i periodi necessari ai rispettivi servizi e descritti nelle proprie informative.</li>
+    </ul>
+    <p>NeoGauge usa il contenitore privato dell'app, SwiftData, CloudKit privato e protezione locale facoltativa con Face ID, Touch ID o codice. Riceve soltanto l'esito dell'autenticazione e non accede ai dati biometrici.</p>
 
-    <h2>7. I tuoi diritti</h2>
-    <p>Nei limiti previsti dalla normativa applicabile, puoi richiedere accesso, rettifica, cancellazione, limitazione o opposizione al trattamento dei tuoi dati. Puoi anche proporre reclamo all'autorità di controllo competente.</p>
+    <h2>11. Pubblicità e tracciamento</h2>
+    <p>In base al consenso, alle impostazioni del dispositivo e alla normativa applicabile, Google può fornire annunci personalizzati o non personalizzati e trattare identificativi e interazioni per pubblicità, misurazione e prevenzione delle frodi. Il Titolare non crea un proprio profilo pubblicitario e non combina i contenuti NeoGauge con dati provenienti da altre app o siti.</p>
 
-    <h2>8. Modifiche a questa informativa</h2>
-    <p>L'informativa può essere aggiornata per riflettere modifiche alle funzionalità dell'app o agli obblighi normativi. In caso di modifiche rilevanti verrà aggiornata la data in alto.</p>
+    <h2>12. Diritti dell'interessato</h2>
+    <p>Nei casi previsti dal GDPR, l'utente può chiedere accesso, rettifica, cancellazione, limitazione, portabilità, opposizione, revoca del consenso e informazioni sui trasferimenti. Può presentare reclamo al <a href="https://www.garanteprivacy.it/">Garante per la protezione dei dati personali</a> o all'autorità competente.</p>
+    <p>Le richieste possono essere inviate a <a href="mailto:ffc80.lavoro@gmail.com">ffc80.lavoro@gmail.com</a>.</p>
+
+    <h2>13. Eliminazione dei dati NeoGauge</h2>
+    <p>La funzione “Elimina dati NeoGauge”, dopo conferme esplicite, tenta di rimuovere backup CloudKit, record SwiftData, fotografie, backup locale, preferenze, notifiche e credenziali obsolete eventualmente presenti nel Keychain.</p>
+    <p>Prima della cancellazione locale, l'app verifica iCloud e richiede l'eliminazione del backup esplicito. Se CloudKit non conferma, l'operazione viene interrotta senza cancellare i record locali. Le successive eliminazioni SwiftData vengono affidate alla sincronizzazione CloudKit, che non fornisce all'app una conferma immediata del completamento su server e altri dispositivi.</p>
+    <p>Disinstallare l'app non garantisce da solo la cancellazione del CloudKit privato: usare prima “Elimina dati NeoGauge”.</p>
+
+    <h2>14. Minori</h2>
+    <p>NeoGauge non è progettata specificamente per bambini. L'età minima prevista per l'utilizzo autonomo è 14 anni. Quando richiesto dalla normativa, l'app deve essere usata con l'autorizzazione di chi esercita la responsabilità genitoriale.</p>
+
+    <h2>15. Modifiche e contatti</h2>
+    <p>L'informativa può essere aggiornata per riflettere modifiche dell'app, dei fornitori o della normativa. La data in alto indica la versione in vigore.</p>
+    <p>Privacy e amministrazione: <a href="mailto:ffc80.lavoro@gmail.com">ffc80.lavoro@gmail.com</a><br>
+      Assistenza tecnica: <a href="mailto:kawasaki.z650rs.italia@gmail.com">kawasaki.z650rs.italia@gmail.com</a></p>
   </main>
 </body>
 </html>
