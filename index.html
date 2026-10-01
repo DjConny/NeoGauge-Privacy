@@ -21,7 +21,7 @@
 <body>
   <main>
     <h1>Informativa sulla privacy di NeoGauge</h1>
-    <p class="updated">Ultimo aggiornamento: 25 luglio 2026</p>
+    <p class="updated">Ultimo aggiornamento: 1 ottobre 2026</p>
 
     <p class="notice">Questa informativa riguarda NeoGauge per iPhone e iPad. La pagina è statica e non contiene moduli di contatto o strumenti pubblicitari propri; GitHub può trattare i dati tecnici di accesso secondo la propria informativa.</p>
 
@@ -41,14 +41,15 @@
     <p>L'app può trattare nome, cognome, email facoltativa, identificativi interni, dati e foto delle moto, letture chilometriche, rifornimenti e costi, titolo e riepilogo dei giri, angoli massimi di piega, statistiche, preferenze e promemoria.</p>
     <p>NeoGauge Plus abilita testo e fotografie del diario dei giri e posizione GPS dei rifornimenti. Senza un abbonamento attivo, eventuali contenuti Plus già creati restano consultabili in sola lettura e non vengono eliminati automaticamente.</p>
 
-    <h3>Posizione precisa e checkpoint temporaneo</h3>
+    <h3>Posizione precisa, storico dei giri e checkpoint temporaneo</h3>
     <p>Con il permesso dell'utente, NeoGauge usa la posizione durante un giro per velocità, direzione, altitudine, distanza, durata, meteo e riepilogo. Se il giro è attivo, la posizione può continuare a essere usata mentre l'app viene temporaneamente portata in secondo piano, per esempio per consultare un navigatore.</p>
-    <p><strong>NeoGauge non salva la traccia GPS punto per punto e non crea uno storico del percorso seguito.</strong> Conserva localmente soltanto l'ultimo checkpoint temporaneo utile a recuperare un giro dopo un'interruzione. Il checkpoint viene eliminato dopo il salvataggio o l'annullamento e, se obsoleto, entro 24 ore.</p>
+    <p><strong>Nei giri salvati NeoGauge conserva la traccia GPS e uno storico delle misure acquisite.</strong> I campioni possono includere coordinate, altitudine, orario, velocità, direzione, distanza progressiva, durata e accuratezza delle letture, oltre agli eventi del giro come avvio, pause, riprese e conclusione. Questi dati sono conservati per consultare il giro e consentire future analisi dello storico. L'archivio viene salvato sul dispositivo e, quando iCloud è disponibile, può essere sincronizzato nel CloudKit privato dell'utente.</p>
+    <p>Durante la registrazione viene conservato anche un checkpoint locale con lo stato del giro e le misure già raccolte, utile a recuperarlo dopo un'interruzione. Il checkpoint viene eliminato dopo il salvataggio o l'annullamento e, se obsoleto, entro 24 ore. <strong>Questo limite non riguarda lo storico dei giri salvati</strong>, che resta conservato anche dopo il consolidamento annuale e fino alla cancellazione da parte dell'utente. Le nuove misure non possono essere ricostruite per giri precedenti in cui non erano state registrate.</p>
     <p>Con NeoGauge Plus, l'utente può scegliere di salvare coordinate, precisione e momento della posizione in un rifornimento. La posizione può essere sincronizzata tramite CloudKit e mostrata con MapKit o Mappe. Se Plus non è più attivo, una posizione storica resta visibile in sola lettura.</p>
 
     <h3>Dati di movimento e stima dell'angolo di piega</h3>
     <p>Se l'utente attiva facoltativamente la funzione “Angolo di piega”, NeoGauge usa Core Motion, accelerometro e giroscopio mentre la dashboard è visibile per stimare l'inclinazione dello smartphone rispetto alla posizione calibrata con la moto ferma e verticale. La stima richiede che il telefono sia fissato rigidamente e allineato al senso di marcia; non è un dato fornito dalla centralina della moto.</p>
-    <p>I campioni grezzi dei sensori e l'angolo corrente vengono elaborati in tempo reale sul dispositivo, non vengono salvati, trasmessi a terzi o sincronizzati. NeoGauge conserva localmente soltanto il riferimento di calibrazione del supporto. Per ciascun giro può salvare nel riepilogo numerico l'angolo massimo stimato verso sinistra e verso destra; questi due valori possono essere sincronizzati nel CloudKit privato insieme agli altri dati del giro. La consultazione storica degli angoli massimi è disponibile con NeoGauge Plus.</p>
+    <p>I campioni grezzi di accelerometro e giroscopio vengono elaborati sul dispositivo e non vengono conservati. Quando la funzione è attiva e calibrata, durante un giro in registrazione NeoGauge conserva anche campioni dell'angolo corrente stimato verso sinistra o destra, fino a quattro al secondo, con orario, velocità, distanza progressiva e indicatori di validità, oltre ai massimi numerici del giro. Questi campioni possono essere sincronizzati nel CloudKit privato insieme agli altri dati del giro. Il riferimento di calibrazione del supporto resta locale. La consultazione e gestione degli angoli massimi è disponibile con NeoGauge Plus.</p>
     <p>La funzione può essere disattivata in qualsiasi momento dalla schermata “Altro”. L'accesso ai dati di movimento può inoltre essere modificato nelle impostazioni di iOS.</p>
 
     <h3>Fotocamera, foto e notifiche</h3>
@@ -61,7 +62,7 @@
 
     <h2>5. Pubblicità e consenso</h2>
     <p>Senza NeoGauge Plus, l'app può mostrare banner e annunci interstitial tramite Google AdMob. Google Mobile Ads e User Messaging Platform possono trattare indirizzo IP e posizione approssimativa derivata, identificativi del dispositivo, interazioni con gli annunci, dati pubblicitari, prestazioni e diagnostica.</p>
-    <p>Questi dati non comprendono profilo, moto, diario, fotografie o posizione GPS precisa salvata nei rifornimenti. Quando richiesto, NeoGauge mostra il messaggio di consenso Google prima di richiedere gli annunci. Le scelte possono essere riviste da <strong>Supporto → Consenso pubblicitario</strong> quando l'opzione è richiesta.</p>
+    <p>NeoGauge non invia ai fornitori pubblicitari profilo, moto, diario, fotografie, coordinate GPS precise o campioni storici dei giri e degli angoli di piega. Quando richiesto, NeoGauge mostra il messaggio di consenso Google prima di richiedere gli annunci. Le scelte possono essere riviste da <strong>Supporto → Consenso pubblicitario</strong> quando l'opzione è richiesta.</p>
     <p>Quando NeoGauge Plus risulta attivo, l'app interrompe le richieste pubblicitarie e rimuove immediatamente banner e interstitial su iPhone e iPad.</p>
 
     <h2>6. Backup</h2>
@@ -86,7 +87,8 @@
     <h2>10. Conservazione e sicurezza</h2>
     <ul>
       <li>I dati operativi restano sul dispositivo e nel CloudKit privato finché l'utente non li elimina.</li>
-      <li>Il checkpoint del giro viene eliminato dopo salvataggio o annullamento e, se obsoleto, entro 24 ore.</li>
+      <li>Tracce GPS e misure storiche dei giri salvati restano conservate anche dopo il consolidamento annuale, fino alla cancellazione da parte dell'utente. La cancellazione dei dati di piega comprende i relativi campioni storici.</li>
+      <li>Il checkpoint temporaneo del giro viene eliminato dopo salvataggio o annullamento e, se obsoleto, entro 24 ore; tale limite non si applica ai giri salvati.</li>
       <li>Il backup sostituisce la versione precedente.</li>
       <li>Apple, Google e RevenueCat conservano i dati tecnici per i periodi necessari ai rispettivi servizi e descritti nelle proprie informative.</li>
     </ul>
